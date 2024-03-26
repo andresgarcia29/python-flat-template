@@ -7,7 +7,7 @@ This is a simple Python template project with an entry point to `main.py`. It ut
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/python-flat-template.git
+   git clone https://github.com/andresgarcia29/python-flat-template.git
    ```
 
 2. Navigate to the project directory:
