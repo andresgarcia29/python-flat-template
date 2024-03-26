@@ -52,14 +52,49 @@ To run the application in a Docker container:
 
 ## Structure
 
-- `main.py`: The entry point of the application.
+- `src/main.py`: The entry point of the application.
+- `tests/*.py`: Folder to create all the tests of your application.
 - `pyproject.toml`: Poetry configuration file.
 - `poetry.lock`: Poetry lock file.
 - `README.md`: This file.
 - `ruff.ini`: Ruff configuration file.
-- `requirements.txt`: List of Python dependencies (used for Docker).
 - `Dockerfile`: Docker configuration file.
 - `docker-compose.yml`: Docker Compose configuration file.
+
+## Running Tests
+
+This project uses pytest for testing. All test files should be located within the `tests` directory and follow the naming convention `test_*.py`.
+
+To execute the tests, run the following command:
+
+```bash
+make test
+```
+
+This command will automatically discover and run all tests within the `tests` directory.
+
+## Writing Tests
+
+When writing tests, make sure to follow good testing practices and organize your test files logically within the `tests` directory. Use meaningful names for test functions and adhere to the Arrange-Act-Assert pattern.
+
+Example test file (`tests/test_example.py`):
+
+```python
+# Import necessary modules
+import pytest
+from mymodule import my_function_to_test
+
+# Define test functions
+def test_my_function():
+    # Arrange
+    input_value = 5
+
+    # Act
+    result = my_function_to_test(input_value)
+
+    # Assert
+    assert result == 10
+```
 
 ## License
 
