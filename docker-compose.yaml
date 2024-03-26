@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    working_dir: /app
+    command: python main.py
+    environment:
+      - ROBOT_NAME=R2-D2
+    volumes:
+      - src/:/app
