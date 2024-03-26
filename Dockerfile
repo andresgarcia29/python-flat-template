@@ -1,4 +1,6 @@
-FROM python:3.10-slim-buster
+FROM python:3.10-alpine
+
+RUN apk add --no-cache gcc musl-dev python3-dev libffi-dev openssl-dev cargo
 
 WORKDIR /app
 
