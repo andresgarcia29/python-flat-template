@@ -1,5 +1,3 @@
-import pytest
-
 from robot.robot import Robot
 
 
