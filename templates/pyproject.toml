@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "${project_name}"
+version = "${project_version}"
+description = "${project_description}"
+authors = ["${project_author}"]
+license = "${project_license}"
+readme = "${project_readme}"
+packages = [{include = "${project_package_include}"}]
+
+[tool.poetry.dependencies]
+python = "^${python_version}"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^${ruff_version}"
+pytest = "^${pytest_version}"
+pre-commit = "^${pre_commit_version}"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
